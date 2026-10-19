@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net10.0-windows</TargetFramework>
+		<Version>1.0.0</Version>
+		<AssemblyVersion>1.0.0</AssemblyVersion>
+		<FileVersion>1.0.0</FileVersion>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UseWindowsForms>true</UseWindowsForms>
+		<AssemblyName>BTSSimpleBackup</AssemblyName>
+		<RootNamespace>BTSSimpleBackup</RootNamespace>
+		<Copyright>Copyright © 2026 Bishop Technical Services LLC</Copyright>
+		<Company>Bishop Technical Services LLC</Company>
+		<Product>BTS SimpleBackup</Product>
+		<Description>Free, open-source weekly backup to a USB drive. No cloud, no account.</Description>
+		<ApplicationManifest>app.manifest</ApplicationManifest>
+		<ApplicationIcon>app.ico</ApplicationIcon>
+	</PropertyGroup>
+
+	<!-- The BTS logo is built into the program so the single .exe carries it. -->
+	<ItemGroup>
+		<EmbeddedResource Include="app.ico" LogicalName="app.ico" />
+		<EmbeddedResource Include="logo.png" LogicalName="logo.png" />
+	</ItemGroup>
+
+	<!-- Publish as ONE self-contained .exe so non-technical users need to install nothing.
+	     Build it with:  dotnet publish -c Release -r win-x64 -->
+	<PropertyGroup Condition="'$(RuntimeIdentifier)' != ''">
+		<SelfContained>true</SelfContained>
+		<PublishSingleFile>true</PublishSingleFile>
+		<IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+		<EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+	</PropertyGroup>
+
+</Project>
