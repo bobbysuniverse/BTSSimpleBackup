@@ -6,6 +6,8 @@ Your files go only to a drive you own and hold in your hand. They are never uplo
 
 A gift to the community from [Bishop Technical Services LLC](https://bishoptechservices.com). Released under the MIT License.
 
+> **Important notice:** BTS SimpleBackup is free software provided "as is", with no warranty of any kind, under the [MIT License](LICENSE). Bishop Technical Services LLC is not liable for lost, damaged or unrecoverable files. A backup only helps if it works, so open your backup drive once in a while and check that your files are there. For anything you can't replace, such as family photos, keep a second copy somewhere else.
+
 ---
 
 ## For everyone: how to use it (about 2 minutes)
